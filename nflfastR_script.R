@@ -15,8 +15,8 @@ data %>%
   select(posteam, defteam, desc, rush, pass) %>% 
   head()
 
-#Alvin Kamara
+#CLoser look @Alvin Kamara Rushing Attempts so far in 20244
 data %>% 
-  filter(name == "A.Kamara" | rush == 1) %>%
-  select(posteam, desc, rush, pass, name, passer, rusher, receiver) %>% 
+  filter(posteam == "NO" & name == "A.Kamara" & rush == 1) %>%
+  select(posteam, desc, rush, name, rusher, yards_gained, run_gap) %>% 
   view()
