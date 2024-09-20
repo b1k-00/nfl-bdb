@@ -14,3 +14,9 @@ data %>%
 data %>% 
   select(posteam, defteam, desc, rush, pass) %>% 
   head()
+
+#Alvin Kamara
+data %>% 
+  filter(name == "A.Kamara" | rush == 1) %>%
+  select(posteam, desc, rush, pass, name, passer, rusher, receiver) %>% 
+  view()
