@@ -21,7 +21,7 @@ ak_anal <- data %>%
   )
 view(ak_anal)
 
-
+##OvRALL STATS ##
 overall_stats <- ak_anal %>%
   summarise(
     total_attempts = n(),
@@ -31,3 +31,13 @@ overall_stats <- ak_anal %>%
     success_rate = mean(success, na.rm = TRUE)
   )
 View(overall_stats)
+
+##DOWN##
+down_stats <- ak_anal %>%
+  group_by(down) %>%
+  summarise(
+    attempts = n(),
+    avg_yards = mean(yards_gained),
+    success_rate = mean(success, na.rm = TRUE),
+  )
+  View(down_stats)
